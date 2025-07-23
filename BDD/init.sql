@@ -15,12 +15,3 @@ CREATE TABLE IF NOT EXISTS beneficiados (
   Emplazamiento VARCHAR(100),
   Postulacion YEAR
 );
-
--- Importa los datos de. '.csv'
-LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/bdd2024.csv'
-INTO TABLE beneficiados
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(Rut, Nombres, Apellido_Paterno, Apellido_Materno, Emplazamiento, Postulacion);

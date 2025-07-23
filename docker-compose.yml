@@ -1,14 +1,16 @@
 services:
   mysql:
-    build: ./BDD
+    image: mysql:9.3.0
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: leasing
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-
     ports:
-      - "3308:3306"
+      - 3308:3306
+    volumes:
+      - ./BDD:/docker-entrypoint-initdb.d
+      - data:/data/bdd
 
   # python:
   #   build: ./Calculo

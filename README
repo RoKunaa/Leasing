@@ -1,0 +1,18 @@
+## Requerimientos
+Aplicaciones necesarias 'Docker', 'MySQLWorkbench' y 'Python'.
+
+# Levantamiento de la Base de Datos
+1. La base de datos se encuentra en el puerto 3308.
+2. El usuario es 'root' y la contraseña seria 'admin'.
+3. La tabla se encuentra en la base de datos es 'BD_LEASING'.
+
+## Para poder usar la Base de datos se utiliza el siguiente codigo, este solo inicia la base de datos.
+docker compose up --build -d
+
+## Se necesita cargar la data.
+1. Para cargar los datos se necesita usar la aplicacion de 'MySQLWorkbench'.
+2. Haciendo click derecho en la tabla de beneficiados existe la opcion de 'Table Data Import Wizard'.
+3. Se selecciona el archivo '.cvc' correspondiente con los campos asignados. 
+4. Se importan los datos
+
+# Calculo de los beneficiados con los clasificados.
